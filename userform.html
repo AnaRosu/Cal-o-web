@@ -9,6 +9,45 @@
     <title>Eat Smart | Set up Your account </title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        var currentTime = new Date();
+        var minday = 1, maxday = 31,
+        select_day = document.getElementById('select_day');
+
+        var minmonth = 1, maxmonth = 12,
+        select_month = document.getElementById('select_month');
+
+        var minyear = 1900, maxyear = 2019,
+        select_year = document.getElementById('select_year');
+
+        for (var i = minday; i<=maxday; i++){
+            var opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = i;
+            select_day.appendChild(opt);
+        }
+        select_day.value = String(currentTime.getDate()).padStart(2, '0');
+
+        for (var i = minmonth; i<=maxmonth; i++){
+          var opt = document.createElement('option');
+          opt.value = i;
+          opt.innerHTML = i;
+          select_month.appendChild(opt);
+        }
+        select_month.value = String(currentTime.getMonth() + 1);
+
+        for (var i = minyear; i<=maxyear; i++){
+          var opt = document.createElement('option');
+          opt.value = i;
+          opt.innerHTML = i;
+          select_year.appendChild(opt);
+        }
+        select_year.value = currentTime.getFullYear();
+
+      });
+    </script>
     </head>
 <body>
   <!-- start header-->
@@ -28,47 +67,41 @@
 </header>
 <!-- end header-->
 <div class="form-box">
+</br>
   <p>Informații generale</p>
   <form class="my-form">
 
     <div class="form-group">
-      <label for="fname">Nume:</label>
-      <input type="text" name="firstname" placeholder="Numele...">
-      <label for="lname">Prenume:</label>
-      <input type="text" name="lastname" placeholder="Prenumele..."><br>
-    </div>
-
-    <div class="form-group">
-      <label for="gender">Gen:</label>
         <input type="radio" name="gender" value="Male">Masculin
         <input type="radio" name="gender" value="Female">Feminin<br>
     </div>
 
     <div class="form-group">
+      <label for="birthdate">Nume/Prenume:</label>
+    </br>
+      <input type="text" name="firstname" placeholder="Numele...">
+      <input type="text" name="lastname" placeholder="Prenumele..."><br>
+    </div>
+
+    
+
+    <div class="form-group">
     <label for="birthdate">Data nașterii:</label>
-      <input type="text" id="birthdate" name="day" placeholder="Zi">
-      <select name="country">
-        <option value="None selected">Lună</option>
-        <option value="01">01</option>
-        <option value="02">02</option>
-        <option value="03">03</option>
-        <option value="04">04</option>
-        <option value="05">05</option>
-        <option value="06">06</option>
-        <option value="07">07</option>
-        <option value="08">08</option>
-        <option value="09">09</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-      </select>
-      <input type="text" id="birthdate" name="year" placeholder="An"><br>
+    </br>
+      <select id="select_day"></select>
+      <select id="select_month"></select>
+      <select id="select_year"></select>
     </div>
 
     <div class="form-group">
       <label for="weight">Greutate:</label>
+      </br>
         <input type="text" class="fgpw" placeholder="kg">
+    </div>
+
+    <div class="form-group">
       <label for="height">Înălțime:</label>
+      </br>
         <input type="text" class="fgph" placeholder="cm"><br>
     </div>
 
@@ -81,7 +114,7 @@
           <option value="active">Activ</option>
           <option value="vactive">Foarte activ</option>
           <option value="eactive">Extrem</option>
-      </select><br>
+      </select></br>
     </div>
 
     <div class="form-group">
@@ -92,7 +125,7 @@
     </div>
 
     <div class="form-group">
-      <input type="submit" value="Salvează">
+      <input class ="btn" type="submit" value="Salvează">
     </div>
   </form>
 </div>
@@ -100,9 +133,9 @@
     <!--end facts section-->
 
 <!--start footer -->
-   <footer>
-       Copyright &copy; 2019 EatSmart
-   </footer>
-   <!-- end footer-->
+ <footer>
+     Copyright &copy; 2019 EatSmart
+ </footer>
+ <!-- end footer-->
 </body>
 </html>
