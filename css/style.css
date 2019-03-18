@@ -166,6 +166,31 @@ footer{
      border:10px;
  }
 }
+/* for the form*/
+.form-box{
+    width: 50%;
+    margin: auto;
+    border:4px dotted white;
+}
+.form-box p{
+    text-align: center;
+}
+
+.my-form{
+    padding: 20px;
+}
+
+.form-group{
+    padding-bottom: 30px;
+    margin-left: 10%;
+}
+
+.form-group input[type=text]{
+    background-color: white;
+    color: black;
+
+}
+/*end form decorations*/
 
 @media only screen and (min-width: 400px) and (max-width: 700px)  {
   #facts p, h3{

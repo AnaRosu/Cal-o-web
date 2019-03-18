@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <!--The <meta> tag provides metadata about the HTML document-->
+  <!--  Meta elements are typically used to specify page description-->
+    <meta charset="UTF-8">
+    <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Smart | Set up Your account </title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    </head>
+<body>
+  <!-- start header-->
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1><i class="fab fa-nutritionix"></i><span class="name">Eat Smart</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="how.html">How it works</a></li>
+                <li><a href="login.html">Login or register</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- end header-->
+<div class="form-box">
+  <p>Informații generale</p>
+  <form class="my-form">
+
+    <div class="form-group">
+      <label for="fname">Nume:</label>
+      <input type="text" name="firstname" placeholder="Numele...">
+      <label for="lname">Prenume:</label>
+      <input type="text" name="lastname" placeholder="Prenumele..."><br>
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gen:</label>
+        <input type="radio" name="gender" value="Male">Masculin
+        <input type="radio" name="gender" value="Female">Feminin<br>
+    </div>
+
+    <div class="form-group">
+    <label for="birthdate">Data nașterii:</label>
+      <input type="text" id="birthdate" name="day" placeholder="Zi">
+      <select name="country">
+        <option value="None selected">Lună</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <input type="text" id="birthdate" name="year" placeholder="An"><br>
+    </div>
+
+    <div class="form-group">
+      <label for="weight">Greutate:</label>
+        <input type="text" class="fgpw" placeholder="kg">
+      <label for="height">Înălțime:</label>
+        <input type="text" class="fgph" placeholder="cm"><br>
+    </div>
+
+    <div class="form-group">
+      <label for="activity">Nivel de activitate:</label>
+      <select name="activity">
+          <option value="sedentary">Sedentar</option>
+          <option value="light">Puțin actic</option>
+          <option value="moderate">Moderat</option>
+          <option value="active">Activ</option>
+          <option value="vactive">Foarte activ</option>
+          <option value="eactive">Extrem</option>
+      </select><br>
+    </div>
+
+    <div class="form-group">
+      <label for="purpose">Ce îți propui?:</label><br>
+      <input type="radio" name="purpose" value="less">să slăbesc<br>
+      <input type="radio" name="purpose" value="same">să mă mențin la aceeași greutate<br>
+      <input type="radio" name="purpose" value="more">să mă îngraș<br>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" value="Salvează">
+    </div>
+  </form>
+</div>
+    
+    <!--end facts section-->
+
+<!--start footer -->
+   <footer>
+       Copyright &copy; 2019 EatSmart
+   </footer>
+   <!-- end footer-->
+</body>
+</html>
