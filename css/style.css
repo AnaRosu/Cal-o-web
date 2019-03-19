@@ -24,7 +24,7 @@ ul {
 header{
   background:#007a5a;
     color:#fff;
-    padding-top: 30px;
+    padding-top: 20px;
     min-height: 70px;
 }
 header #branding{
@@ -32,7 +32,6 @@ header #branding{
 }
 header #branding h1 {
     margin: 0;
-    margin-bottom: 15px;
 }
 
 header nav{
@@ -73,11 +72,11 @@ i.fab {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("image1.jpg"), no-repeat center center fixed;
     background-size: 100% 100%;
     text-align: center;
-    min-height: 500px;
+    min-height: 550px;
     color:#fff;
 }
 #showcase h1{
-     margin-top:150px;
+     margin-top:120px;
      font-size:30px;
      text-transform: capitalize;
      margin-bottom: 10px;
@@ -99,7 +98,7 @@ i.fab {
 
 #facts .box{
     float: left;
-    width: 30%;
+    width: 33%;
     padding:10px;
     text-align: center;
 }
@@ -112,10 +111,6 @@ i.fab {
 
 /* start footer */
 footer{
-
-    bottom: 0;
-    left: 0;
-    right: 0;
     padding: 20px;
     margin-top: 20px;
     color: #fff;
@@ -123,76 +118,6 @@ footer{
     text-align: center;
 }
 /* end footer */
-
-/* -----------------------------------------user details form-----------------------------------------*/
-.form-box{
-    width: 30%;
-    margin: auto;
-    margin-top: 20px;
-    background-image: url("image8.jpg");
-    background-color: rgba(255, 255, 255, 0.8);
-    background-blend-mode: lighten;
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-    /*border-radius: 25px;*/
-}
-.form-box p{
-    text-align: center;
-    font-weight: bold;
-}
-
-.my-form{
-    padding: 20px;
-}
-
-.form-group{
-    padding-bottom: 30px;
-}
-
-.form-group input[type=text]{
-    background-color: white;
-    color: black;
-
-}
-
-#user_form_id{
-    min-height: 500px;
-}
-
-.btn {
-/* Text color */
-      color: #007a5a;
-/* Remove background color */
-      background: transparent; 
-/* Border thickness, line style, and color */
-      border: 2px solid #007a5a;
-/* Adds curve to border corners */
-      border-radius: 6px; 
-/* Make letters uppercase */
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      -webkit-transition-duration: 0.4s; /* Safari */
-      transition-duration: 0.4s;
-      cursor: pointer;
-      text-decoration: none;
-      margin-left:auto;
-      margin-right:auto;
-      display:block;
-}
-.btn {
-      background-color: white; 
-      color: black; 
-      border: 2px solid #007a5a;
-}
- .btn:hover {
-      background-color: #007a5a;
-      color: white;
- }
-/* --------------------------------------------------------------------------------------------------------*/
 
 /* start responsive page */
 @media only screen and (min-width: 701px) and (max-width:900px){
@@ -223,24 +148,47 @@ footer{
         font-size:22px;
         align-self: center;
     }
- #facts p, h3{
-   line-height :17px;
-   left: 0;
-   right: 0;
- }
+ #facts h3{font-size: 20px;}
+ #facts p{font-size: 15px;}
 
  #facts .box{
      float: left;
      width: 30%;
      padding:5px;
      text-align: center;
+     margin-left: 12px;
  }
  #facts .box img{
-     width:150px;
-     height:90px;
-     border:10px;
+     width:170px;
+     height:95px;
+     border:7px;
  }
 }
+/* for the form*/
+.form-box{
+    width: 50%;
+    margin: auto;
+    border:4px dotted white;
+}
+.form-box p{
+    text-align: center;
+}
+
+.my-form{
+    padding: 20px;
+}
+
+.form-group{
+    padding-bottom: 30px;
+    margin-left: 10%;
+}
+
+.form-group input[type=text]{
+    background-color: white;
+    color: black;
+
+}
+/*end form decorations*/
 
 @media only screen and (min-width: 400px) and (max-width: 700px)  {
   #facts p, h3{
@@ -260,11 +208,11 @@ footer{
   }
   #showcase h1{
        margin-top:85px;
-       font-size:20px;
+       font-size:18px;
        margin-bottom: 10px;
   }
   #showcase p{
-      font-size:15px;
+      font-size:12px;
       align-self: center;
   }
 }
@@ -296,4 +244,3 @@ footer{
 }
 
 /* end responsive page */
-
