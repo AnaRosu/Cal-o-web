@@ -30,19 +30,13 @@
 
 <div class="wrapper">
 	<div class="btn-group" id="form-selector">
-<<<<<<< HEAD
-		<button type="button" class="btn btn-selector active" id="register-btn" onclick="myFunction1()">Register</button>
-		<button type="button" class="btn btn-selector" id="log-in-btn" onclick="myFunction2()">Log In</button>
-=======
 		<button type="button" class="btn btn-selector active" id="register-btn" >Register</button>
 		<button type="button" class="btn btn-selector" id="log-in-btn">Log In</button>
->>>>>>> c20b9b48debdfa2866c989bc9583542ef09fe6ed
 	</div>
 	<div class="form" id="register-form">
 		<h2 class="form-title">Register</h2>
 		<input type="text" class="input-std" id="email" placeholder="Email">
-		<input type="text" class="input-half" id="first-name" placeholder="First Name">
-		<input type="text" class="input-half" id="last-name" placeholder="Last Name">
+		<input type="text" class="input-std" id="Username" placeholder="Username">
 		<input type="password" class="input-std" id="password" placeholder="Password">
 		<input type="password" class="input-std" id="password-confirmation" placeholder="Password Confirmation">
 		<button type="button" class="btn-submit" id="register">Register!</button>
@@ -51,40 +45,10 @@
 		<h2 class="form-title">Log In</h2>
 		<input type="text" class="input-std" id="email" placeholder="Email">
 		<input type="password" class="input-std" id="password" placeholder="Password">
-<<<<<<< HEAD
-		<div id="remember-me-wrapper">
-			<input type="checkbox" id="remember-me">
-			<label for="remember-me">Remember Me</label>
-		</div>
-=======
->>>>>>> c20b9b48debdfa2866c989bc9583542ef09fe6ed
 		<button type="button" class="btn-submit" id="log-in">Log In!</button>
 	</div>
   </div>
   <script>
-<<<<<<< HEAD
-function myFunction1() {
-  var x = document.getElementById("register-form");
-  var y = document.getElementById("register-btn");
-  if (x.style.display == "none") {
-    x.style.display = "block";
-    y.style.backgroundColor ="#CFCCCC";
-  }else{
-  x.style.display = "none";
-  y.style.backgroundColor = "white";
-  }
-}
-function myFunction2() {
-  var x = document.getElementById("register-form");
-  var y = document.getElementById("register-btn");
-  var z = document.getElementById("log-in-form");
-  if (x.style.display == "none") {
-      z.style.display = "block";
-  }
-  if(z.style.display = "block" && x.style.display == "none" )z.style.display = "none";
-}
-
-=======
   window.onload = function(){
 			var signUpTab = document.getElementById("register-btn");
 			signUpTab.onclick = function(){
@@ -101,7 +65,6 @@ function myFunction2() {
       document.getElementById('register-btn').setAttribute("class", "btn btn-selector", "btn-group");
 			}
     }
->>>>>>> c20b9b48debdfa2866c989bc9583542ef09fe6ed
 </script>
   </body>
   </html>
