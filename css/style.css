@@ -1,3 +1,4 @@
+
 body{
     font-family: sans-serif;
     padding: 0;
@@ -69,14 +70,14 @@ i.fab {
 /* start show case */
 
 #showcase{
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("image1.jpg"), no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("image23.jpg"), no-repeat center center fixed;
     background-size: 100% 100%;
     text-align: center;
-    min-height: 550px;
+    min-height: 460px;
     color:#fff;
 }
 #showcase h1{
-     margin-top:120px;
+     margin-top:150px;
      font-size:30px;
      text-transform: capitalize;
      margin-bottom: 10px;
