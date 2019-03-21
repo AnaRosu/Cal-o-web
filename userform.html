@@ -68,60 +68,55 @@
 <!-- end header-->
 <div class="form-box">
 </br>
-  <p>Informații generale</p>
+  <p>General information</p>
   <form class="my-form">
 
     <div class="form-group">
-        <input type="radio" name="gender" value="Male">Masculin
-        <input type="radio" name="gender" value="Female">Feminin<br>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female<br>
     </div>
 
     <div class="form-group">
-      <label for="birthdate">Nume/Prenume:</label>
-    </br>
-      <input type="text" class="field1" name="firstname" placeholder="Numele...">
-      <input type="text" class="field2" name="lastname" placeholder="Prenumele..."><br>
+      <input type="text" class="field1" name="firstname" placeholder="Last Name...">
+      <input type="text" class="field2" name="lastname" placeholder="First Name...">
     </div>
 
-    
-
     <div class="form-group">
-    <label for="birthdate">Data nașterii:</label>
-    </br>
+    <label for="birthdate">Date of birth:</label>
+    <br>
       <select class="dropdown" id="select_day"></select>
       <select class="dropdown" id="select_month"></select>
       <select class="dropdown" id="select_year"></select>
     </div>
-
     <div class="form-group">
-      <label for="weight" class="field1">Greutate:</label>
-      <label for="height" class="field2">Înălțime:</label>
-      </br>
+      <label for="weight" class="field1">Weight:</label>
+      <label for="height" class="field2">Height:</label>
+      <br>
       <input type="text" class="field1" placeholder="kg">
       <input type="text" class="field2" placeholder="cm"><br>
     </div>
 
     <div class="form-group">
-      <label for="activity">Nivel de activitate:</label>
-      <select name="activity">
+      <label for="activity">Activity level:</label><br>
+      <select class="dropdown" name="activity">
           <option value="sedentary">Sedentar</option>
           <option value="light">Puțin actic</option>
           <option value="moderate">Moderat</option>
           <option value="active">Activ</option>
           <option value="vactive">Foarte activ</option>
           <option value="eactive">Extrem</option>
-      </select></br>
+      </select><br>
     </div>
 
     <div class="form-group">
-      <label for="purpose">Ce îți propui?:</label><br>
-      <input type="radio" name="purpose" value="less">să slăbesc<br>
-      <input type="radio" name="purpose" value="same">să mă mențin la aceeași greutate<br>
-      <input type="radio" name="purpose" value="more">să mă îngraș<br>
+      <label for="purpose">What would you like to achieve?</label><br>
+      <input type="radio" name="purpose" value="less">lose weight<br>
+      <input type="radio" name="purpose" value="same">maintain the same wright<br>
+      <input type="radio" name="purpose" value="more">gain weight<br>
     </div>
 
     <div class="form-group">
-      <input class ="btn" type="submit" value="Salvează">
+      <input class ="btn" type="submit" value="Save">
     </div>
   </form>
 </div>
