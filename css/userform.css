@@ -71,31 +71,31 @@ i.fab {
 
 /* -----------------------------------------user details form-----------------------------------------*/
 .form-box{
+    color: #434740;
     font-size: 22px;
-    width: 45%;
+    width: 40%;
     margin: auto;
-    margin-top: 20px;
-    /*background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("image8.jpg"), no-repeat center center fixed;*/
+    margin-top: 5%;
+    margin-bottom: 5%;
     background-color: #DEDCDC;
-    /*background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(255, 255, 255, 0.8);
-    background-blend-mode: normal;*/
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-    /*border-radius: 25px;*/
     z-index: -1;
+    margin-left: 12%;
+    overflow: hidden;
+
 }
 .form-box p{
     text-align: center;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 .my-form{
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 
 .form-group{
-    padding-bottom: 30px;
+    padding-bottom: 0.5em;
 }
 
 .form-group input[type=text]{
@@ -113,8 +113,9 @@ i.fab {
   width: 47%;
 }
 
-.form-group input:focus,select{
+.form-group input:focus,.dropdown:focus{
     outline: none;
+    border: 1px solid #44C7A9;
 }
 .dropdown{
   display: inline-block;
@@ -130,9 +131,21 @@ i.fab {
   margin-bottom: 10px;
 
 }
+.dropdown2{
+  display: inline-block;
+  color: gray;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 22px;
+  height: 50px;
+  padding: 4px 6px;
+  width:40%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
 .form-group select option{
   position:absolute;
-
 }
 
 .field1{
@@ -141,50 +154,27 @@ i.fab {
 .field2{
   float: right;
 }
-/*.btn {*/
-/* Text color */
-      /*color: #007a5a;*/
-/* Remove background color */
-    /*  background: transparent; */
-/* Border thickness, line style, and color */
-      /*border: 2px solid #007a5a;*/
-/* Adds curve to border corners */
-     /* border-radius: 6px; */
-/* Make letters uppercase */
-      /*border: none;
-      color: white;
-      padding: 10px 20px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;*/
-      /*-webkit-transition-duration: 0.4s; *//* Safari */
-      /*transition-duration: 0.4s;
-      cursor: pointer;
-      text-decoration: none;
-      margin-left:auto;
-      margin-right:auto;
-      display:block;*/
-/*}*/
+.field2-l{
+  margin-left: 40%;
+}
 .btn {
       
         font-weight: normal;
         text-align: center;
         cursor: pointer;
-        border: 1px solid transparent;
         white-space: nowrap;
         padding: 10px 30px;
-        font-size: 20px;
+        width: 8em;
+        height: 3em;
+        font-size: 1em;
         line-height: 1.0;
-        border-radius: 4px;
-        margin-left: -4px;
+        border-radius: 6px;
         background-color: #007a5a;
+        border: 2px solid #cccccc;
+        color: #ffffff;
+        display: table;
+   margin: 0 auto
 }
-
- .btn:hover {
-      background-color: #007a5a;
-      color: white;
- }
 
 
 /* --------------------------------------------------------------------------------------------------------*/

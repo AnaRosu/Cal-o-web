@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/userform.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
+    <script>
       $( document ).ready(function() {
         var currentTime = new Date();
         var minday = 1, maxday = 31,
@@ -67,7 +67,7 @@
 </header>
 <!-- end header-->
 <div class="form-box">
-</br>
+
   <p>General information</p>
   <form class="my-form">
 
@@ -82,36 +82,35 @@
     </div>
 
     <div class="form-group">
-    <label for="birthdate">Date of birth:</label>
-    <br>
-      <select class="dropdown" id="select_day"></select>
-      <select class="dropdown" id="select_month"></select>
-      <select class="dropdown" id="select_year"></select>
-    </div>
-    <div class="form-group">
-      <label for="weight" class="field1">Weight:</label>
-      <label for="height" class="field2">Height:</label>
+      <label class="field1">Weight:</label>
+      <label class="field2-l">Height:</label>
       <br>
       <input type="text" class="field1" placeholder="kg">
       <input type="text" class="field2" placeholder="cm"><br>
     </div>
 
     <div class="form-group">
-      <label for="activity">Activity level:</label><br>
-      <select class="dropdown" name="activity">
-          <option value="sedentary">Sedentar</option>
-          <option value="light">Puțin actic</option>
-          <option value="moderate">Moderat</option>
-          <option value="active">Activ</option>
-          <option value="vactive">Foarte activ</option>
-          <option value="eactive">Extrem</option>
-      </select><br>
+    <label>Date of birth:</label>
+    <br>
+      <select class="dropdown" id="select_day"></select>
+      <select class="dropdown" id="select_month"></select>
+      <select class="dropdown" id="select_year"></select>
     </div>
-
+    
     <div class="form-group">
-      <label for="purpose">What would you like to achieve?</label><br>
+      <label>Activity level:</label><br>
+      <select class="dropdown2" name="activity">
+          <option value="sedentary">Sedentary</option>
+          <option value="moderate">Moderately active</option>
+          <option value="active">Active</option>
+          <option value="vactive">Vigorously active</option>
+          <option value="eactive">Extremely active</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>What would you like to achieve?</label><br>
       <input type="radio" name="purpose" value="less">lose weight<br>
-      <input type="radio" name="purpose" value="same">maintain the same wright<br>
+      <input type="radio" name="purpose" value="same">maintain the same weight<br>
       <input type="radio" name="purpose" value="more">gain weight<br>
     </div>
 
