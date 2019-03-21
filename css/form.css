@@ -4,7 +4,8 @@ body{
     padding: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("image2.jpg"), no-repeat center center fixed;
     background-size: 100% 100%;
-    min-height: 800px;
+    min-height: 750px;
+    background-attachment: fixed;
   }
 /* container for header , all sections  */
 .container{
@@ -202,4 +203,185 @@ input:focus {
 }
 #log-in-form{
 	display: none;
+}
+
+
+/* start responsive page */
+@media only screen and (min-width: 950px) and (max-width:1025px){
+
+  .wrapper{
+    margin-left: 70px;
+    margin-top: 250px;
+  }
+    .form {
+    width: 450px;
+    padding: 10px 20px 15px;}
+.form h2{font-size: 50px;}
+.btn-submit{
+font-size: 30px;
+}
+input[type="text"],
+input[type="password"] {
+font-size: 20px;}
+}
+}
+
+
+@media only screen and (min-width: 701px) and (max-width:900px){
+
+    header #branding,
+    header nav ,
+    header nav ul
+    {
+        float: right;
+        text-align: left;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+    header nav ul li{
+      float: left;
+    }
+    .wrapper{
+      margin-left: 70px;
+      margin-top: -10px;
+    }
+      .form {
+    	width: 360px;
+      padding: 10px 20px 15px;}
+.form h2{font-size: 30px;}
+.btn-submit{
+  font-size: 25px;
+}
+input[type="text"],
+input[type="password"] {
+  font-size: 20px;}
+}
+
+@media only screen and (min-width: 601px) and (max-width:701px){
+  body{
+    min-height: 750px;
+  }
+    header #branding,
+    header nav ,
+    header nav ul
+    {
+        float: right;
+        text-align: left;
+        width: 100%;
+    }
+
+    header {
+        padding-bottom: 20px;
+    }
+    header nav ul li{
+      float: left;
+    }
+    .wrapper {
+      margin-left: 60px;
+      margin-top: -15px;
+    }
+    .form {
+    	width: 305px;
+      padding: 10px 20px 15px;}
+.btn-submit{
+  font-size: 20px;
+}
+input[type="text"],
+input[type="password"] {
+  font-size: 18px;
+}
+  .btn{
+    padding: 10px 30px;
+    font-size: 17px;
+  }
+  .form h2{
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+@media only screen and (max-width: 600px){
+header #branding,
+header nav ,
+header nav ul
+{
+    float: right;
+    text-align: left;
+    width: 100%;
+}
+
+header {
+    padding-bottom: 15px;
+}
+header nav ul li{
+  float: left;
+}
+.wrapper{
+  margin-left:25px;
+  margin-top: -20px;
+  }
+.form {
+  width: 240px;
+  padding: 10px 20px 10px;}
+.btn-submit{
+font-size: 20px;
+}
+input[type="text"],
+input[type="password"] {
+font-size: 18px;
+height: 40px;}
+.btn{
+padding: 10px 20px;
+font-size: 15px;
+}
+.form h2{
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+}
+@media only screen and (max-width: 400px){
+  body{
+    min-height: 700px;
+  }
+header{
+  padding: 5px;
+  }
+  header h1{font-size: 30px;}
+
+ header nav  ul li a  { font-size: 15px;}
+ .wrapper{
+   margin-left:40px;
+   margin-top:-20px;
+   }
+   .form {
+     width: 220px;
+}
+input[type = "text"],
+input[type = "password"]
+{
+  height: 30px;
+  font-size: 15px;
+}
+.btn-submit
+{
+  padding: 10px 15px;
+}
+   }
+   @media only screen and (max-width: 300px){
+ .form {
+       width: 190px;
+  }
+  header h1{font-size: 27px;}
+  input[type = "text"],
+  input[type = "password"]
+  { font-size: 15px;
+    height: 25px;
+  }
+  header nav ul li a {
+    font-size: 14px;
+  }
+
 }
