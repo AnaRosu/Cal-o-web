@@ -4,16 +4,15 @@ body{
     padding: 0;
     margin: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("image2.jpg"), no-repeat center center fixed;
-    background-size: 100%;
-    min-height: 100%;
+    background-size: 100% 100%;
+    min-height: 750px;
+    background-attachment: fixed;
   }
-  *
-  {
-    box-sizing: border-box;
-  }
+
 /* container for header , all sections  */
 .container{
   width: 75%;
+  overflow: hidden;
   margin: auto;
   }
 
@@ -28,7 +27,7 @@ header{
     background:#007a5a;
     color:#fff;
     padding-top: 20px;
-    min-height: 80px;
+    min-height: 50px;
 }
 header #branding{
     float: left;
@@ -135,8 +134,9 @@ i.fab {
 
 .form h2 {
 	color: #434740;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 	margin: 10px 0 20px 0;
+  font-weight: bold;
   text-align: center;
 }
 .form2 h2{
@@ -167,8 +167,7 @@ i.fab {
   border: 1px solid #44C7A9;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type="text"]{
 	display: block;
   color: gray;
 	background-color: #ffffff;
@@ -180,14 +179,17 @@ input[type="password"] {
   border-radius: 4px;
   margin-bottom: 10px;
 }
-
+#quantity{
+  width: 92%;
+  height: 45px;
+}
 #add-food, #statistics{
   float: left;
   width: 30%;
 }
 #statistics{
   margin-top: 5%;
-  height: 250px;
+  height: 230px;
   margin-bottom: 10%;
 }
 #calendar{
@@ -239,5 +241,124 @@ input:focus {
   border-radius: 4px;
 }
 
+@media only screen and (min-width: 1080px) and (max-width:1300px){
+  #add-food{
+    width: 30%;
+  }
+  #calendar{
+    width: 55%;
+  }
+  #quantity{
+    width: 90%;
+    height: 40px;
+  }
+  
+}
+@media only screen and (min-width: 800px) and (max-width:1080px){
+  #add-food{
+    width: 30%;
+  }
+  #calendar{
+    width: 55%;
+  }
+  #quantity{
+    width: 90%;
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width:800px){
+  body{min-height: 700px;}
+  header{padding: 5px;}
+  header h1{font-size: 30px;}
+  header nav  ul li a  { font-size: 15px;}
+  #add-food,#calendar,#statistics{
+    width: 90%;
+  }
+  .meal-section{
+    height: 250px;
+  }
+  .form,.form2,.form3{
+    margin-bottom: 10%;
+    float: none;
+  }
+  #quantity{
+    width: 92%;
+  }
+   .meal-section{
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 450px) and (max-width: 601px){
 
+  body{min-height: 700px;}
+  header{padding: 5px;}
+  header h1{font-size: 30px;}
+  header nav  ul li a  { font-size: 15px;}
+  #add-food,#calendar,#statistics{
+    width: 90%;
+  }
+  .meal-section{
+    height: 250px;
+  }
+  .form,.form2,.form3{
+    margin-bottom: 10%;
+    float: none;
+  }
+  input[type = "text"],.my_select{
+    height: 40px;
+    font-size: 15px;
+  }
+  #quantity{
+    width: 90%;
+    height: 35px;
+  }
+  .btn-submit{
+    padding: 5px 10px;
+    height: 45px;
+    font-size: 15px;
+  }
+  #statistics{
+    margin-top: 0;
+  }
+  .form2 h2 {
+    font-size: 19px;
+  }
+}
+
+@media only screen and (max-width:450px){
+  body{min-height: 700px;}
+  header{padding: 5px;}
+  header h1{font-size: 30px;}
+  header nav  ul li a  { font-size: 15px;}
+  #add-food,#calendar,#statistics{
+    width: 90%;
+  }
+  .form,.form2,.form3{
+    margin-bottom: 10%;
+    float: none;
+  }
+  input[type = "text"],.my_select{
+    height: 30px;
+    font-size: 15px;
+  }
+  .btn-submit{
+    padding: 5px 10px;
+    height: 35px;
+    font-size: 15px;
+  }
+  #quantity{
+    width: 90%;
+    height: 25px;
+  }
+  .form2 h2 {
+    font-size: 17px;
+  }
+
+  #statistics{
+    margin-top: 0;
+  }
+  .meal-section{
+    height: 200px;
+  }
+}
 
