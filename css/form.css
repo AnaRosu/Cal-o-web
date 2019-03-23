@@ -110,20 +110,6 @@ i.fab {
   outline: none;
 }
 
-.btn-group .btn:not(:first-child):not(:last-child) {
-  border-radius: 0;
-}
-
-.btn-group .btn:first-child:not(:last-child) {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-}
-
-.btn-group .btn:last-child:not(:first-child) {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
 /*end of btn group*/
 
 /*form general*/
