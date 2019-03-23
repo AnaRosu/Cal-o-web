@@ -2,7 +2,7 @@ body{
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("image2.jpg"), no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("image2.jpg"), no-repeat center center fixed;
     background-size: 100% 100%;
     min-height: 750px;
     background-attachment: fixed;
@@ -195,7 +195,10 @@ input:focus {
 }
 
 #register {
-  background-color: #007a5a;
+  background-color: #007a5a;}
+  #register a{
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 #log-in {

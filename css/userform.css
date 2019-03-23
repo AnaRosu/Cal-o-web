@@ -155,7 +155,7 @@ i.fab {
   margin-left: 40%;
 }
 .btn {
-      
+
         font-weight: normal;
         text-align: center;
         cursor: pointer;
@@ -176,21 +176,6 @@ i.fab {
 
 /* --------------------------------------------------------------------------------------------------------*/
 
-/* start footer */
-footer{
-
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    margin-top: 20px;
-    color: #fff;
-    background:#007a5a;
-    text-align: center;
-}
-/* end footer */
-
-
 
 @media only screen and (min-width: 1080px) and (max-width:1300px){
 
@@ -201,6 +186,7 @@ footer{
 .form-group input[type=text]{
   width: 46%;
 }
+
 }
 
 @media only screen and (min-width: 950px) and (max-width:1080px){
@@ -269,6 +255,7 @@ header nav  ul li a  { font-size: 15px;}
   font-size: 15px;
   width: 90%;
   margin-left: 5%;
+  float: center;
 }
 .dropdown,.dropdown2,.form-group input[type=text]{
   height: 35px;
@@ -284,7 +271,7 @@ header nav  ul li a  { font-size: 15px;}
 .form-group input[type=text]{
   font-size: 15px;
   width: 46%;
-  float: left; 
+  float: left;
 }
 .dropdown{
   font-size: 15px;
@@ -296,35 +283,36 @@ header nav  ul li a  { font-size: 15px;}
 
 
 @media only screen and (max-width:450px){
-  body{min-height: 700px;}
-  header{padding: 5px;}
-  header h1{font-size: 30px;}
-  header nav  ul li a  { font-size: 15px;}
-  .form-box{
-    width: 90%;
-    font-size: 15px;
-    margin:5%;
-  }
-  .dropdown{
-    font-size: 15px;
-    float: left;
-    width: 30%;
-  }
-  .dropdown,.dropdown2{
-    height: 40px;
-  }
-  .form-group{
-  }
-  .form-group input[type=text]{
-    height: 35px;
-  }
-  #select-day,#select-month,#select-year{
-    width: 30%;
-  }
-  .form-group input[type=text],.dropdown2{
-    font-size: 15px;
-    width: 90%;
-    float: left; 
-  }
+body{min-height: 700px;}
+header{padding: 5px;}
+header h1{font-size: 30px;}
+header nav  ul li a  { font-size: 15px;}
+.form-box{
+  width: 90%;
+  font-size: 15px;
+  margin:5%;
+  float: center;
+}
+.dropdown{
+  font-size: 15px;
+  float: left;
+  width: 30%;
+}
+.dropdown,.dropdown2{
+  height: 40px;
+}
+.form-group{
+}
+.form-group input[type=text]{
+  height: 35px;
+}
+#select-day,#select-month,#select-year{
+  width: 30%;
+}
+.form-group input[type=text],.dropdown2{
+  font-size: 15px;
+  width: 90%;
+  float: left;
+}
 
 }

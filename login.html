@@ -39,13 +39,13 @@
 		<input type="text" class="input-std" placeholder="Username">
 		<input type="password" class="input-std"  placeholder="Password">
 		<input type="password" class="input-std"  placeholder="Password Confirmation">
-		<button type="button" class="btn-submit" id="register">Register!</button>
+	  <button type="button" class="btn-submit" id="register">Register</button>
 	</div>
 	<div class="form" id="log-in-form">
 		<h2 class="form-title">Log In</h2>
 		<input type="text" class="input-std" placeholder="Email">
 		<input type="password" class="input-std" placeholder="Password">
-		<button type="button" class="btn-submit" id="log-in">Log In!</button>
+		<button type="button" class="btn-submit" id="log-in">Log In</button>
 	</div>
   </div>
 </div>
@@ -66,6 +66,9 @@
       document.getElementById('register-btn').setAttribute("class", "btn btn-selector", "btn-group");
 			}
     }
+    document.getElementById("register").onclick = function () {
+        location.href = "userform.html";
+    };
 </script>
   </body>
   </html>
