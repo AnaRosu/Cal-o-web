@@ -1,12 +1,30 @@
 <?php
 require '../config.php';
 require_once '../app/init.php';
-   function dbConnect(){
-     try {
-       $conn = new PDO ('mysql:host=localhost;dbname=' . DB_SCHEMA, DB_USER, DB_PASS, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-       return $conn;
-     } catch (PDOException $e) {
-       echo 'ERROR', $e->getMessage();
-     }
-   }
+   /*function dbConnect(){
+		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+		return $conn;
+     
+   }*/
+
+  class Db {
+    private static $instance = NULL;
+    private function __construct() {}
+    private function __clone() {}
+    public static function getInstance() {
+        try{
+            if (!isset(self::$instance)) {
+                $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
+                self::$instance = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USER,DB_PASS, $pdo_options);
+            }
+        
+            return self::$instance; //creating a singleton class
+        }
+        catch(PDOException $e) {
+            //show error
+            return '<p class="bg-danger">'.$e->getMessage().'</p>';
+        }
+    }
+  }
+
 ?>

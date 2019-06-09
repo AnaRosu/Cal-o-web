@@ -4,7 +4,7 @@ class App
     protected $controller = 'home';
     protected $method = 'index';
     protected $params = [];
-    public function __construct($pdo)
+    public function __construct()
     {
         $url = $this->parseUrl();
 //        echo 'URL: ';
@@ -29,7 +29,7 @@ class App
         //in cazul in care nu avem parametrii
         $this->params = $url ? array_values($url) : [];
 //        print_r($this->params);
-        array_unshift($this->params, $pdo);
+        //array_unshift($this->params, $pdo); CE FACE ASTA??
 //        print_r($this->params);
         call_user_func_array([$this->controller, $this->method], $this->params);
 //        echo $this->controller;

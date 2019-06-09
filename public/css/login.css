@@ -78,7 +78,7 @@ i.fab {
   width: 375px;
   background-color: #DEDCDC;
   box-shadow: 0 0 25px 0 #000;
-  margin-top: 200px;
+  margin-top: 180px;
 
 }
 
@@ -142,21 +142,6 @@ input:focus {
   outline: none;
 }
 
-#register {
-  background-color: #007a5a;}
-  #register a{
-  color: #fff !important;
-  text-decoration: none !important;
-}
-
-#log-in {
-  background-color: #007a5a;
-}
-#log-in-form{
-  display: none;
-}
-
-
 /* start responsive page */
 @media only screen and (min-width: 950px) and (max-width:1025px){
 
@@ -174,6 +159,13 @@ font-size: 30px;
 input[type="text"],
 input[type="password"] {
 font-size: 20px;}
+}
+
+#log-in {
+  background-color: #007a5a;}
+  #log-in a{
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 
