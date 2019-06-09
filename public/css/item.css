@@ -68,56 +68,6 @@ i.fab {
    color:#002e22;
  }
 /* end header */
-.container_recipe{
-  width: 100%;
-  padding-right: 15px;
-  margin-top: 50px;
-
-}
-.form-box p{
-  font-size: 30px;
-  margin-top: 5%;
-  margin-left: 5%;
-}
-.form-box{
-    color: #434740;
-    font-size: 22px;
-    width: 40%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    background-color: #DEDCDC;
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-    z-index: -1;
-    margin-left:5%;
-    overflow: hidden;
-
-}
-.my-form{
-    padding: 0 20px 20px 20px;
-}
-.my-form input{
-  font-weight: 100;
-}
-input[type="text"],
-input[type="number"] {
-	display: block;
-	background-color: #ffffff;
-	border: 1px solid #cccccc;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	font-size: 22px;
-  height: 50px;
-  padding: 4px 6px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-input:focus {
-	outline: none;
-	border: 1px solid #44C7A9;
-}
-
-.input-std {
-	width: 95.5%;
-}
 .btn {
   font-weight: normal;
   text-align: center;
@@ -142,45 +92,36 @@ input:focus {
 	border: 2px solid #cccccc;
 	cursor: pointer;
 	color:#ffffff;
-  margin-left: 10px;
+  margin-left: 100px;
 }
 .btn-submit:focus {
 	outline: none;
 }
-.form-group input:focus,.dropdown:focus{
-    outline: none;
-    border: 1px solid #44C7A9;
+thead {
+  background: #007A5A;
+  color: white;
+  text-decoration: underline;
 }
-.dropdown{
+tbody tr:nth-child(odd) {
+  background: #DEDCDC;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 40%;
+  float: left;
+}
 
-    display: inline-block;
-    color: gray;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    font-size: 22px;
-    height: 50px;
-    padding: 4px 6px;
-    width:95%;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-.form-group{
-  margin-top: 10%;
-}
-.form-group select option{
-      position:absolute;
-        }
-select {  border-radius: 0px;
-border-color: rgb(169, 169, 169);
--webkit-appearance: menulist;
-box-sizing: border-box;
-align-items: center;
-white-space: pre;
--webkit-rtl-ordering: logical;
+td, th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 10px;
 
 }
 
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 
 @media only screen and (min-width: 1000px) and (max-width:1300px){
 .form-box {

@@ -24,7 +24,6 @@
         <nav>
             <ul>
                 <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="how.php">How it works</a></li>
                 <li><a href="../public/login">Login</a></li>
                 <li><a href="../public/register">Register</a></li>
             </ul>

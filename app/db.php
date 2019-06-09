@@ -4,7 +4,7 @@ require_once '../app/init.php';
    /*function dbConnect(){
 		$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 		return $conn;
-     
+
    }*/
 
   class Db {
@@ -17,7 +17,7 @@ require_once '../app/init.php';
                 $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
                 self::$instance = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME, DB_USER,DB_PASS, $pdo_options);
             }
-        
+
             return self::$instance; //creating a singleton class
         }
         catch(PDOException $e) {

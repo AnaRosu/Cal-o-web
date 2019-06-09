@@ -1,5 +1,6 @@
 <?php
  require_once '../app/db.php' ;
+ require_once '../app/models/UserStatistics.php' ;
 class User {
 	public $username;
 	public $password;
@@ -81,6 +82,68 @@ class User {
     catch(Exception $e){
         echo($e->getMessage());
         return false;
+    }
+  }
+
+  function getIdUser($username, $pass){
+    $db = Db::getInstance();
+    $password = md5($pass);
+    $sql = "select * from users where username = :username AND password= :password";
+    $stmt = $db->prepare($sql);
+    $stmt->execute(array('username' => $username, 'password' => $password));
+    $result = $stmt->fetch();
+
+    return $result['id'];
+  }
+
+  function getUserData($id){
+    $db = Db::getInstance();
+    $sql = "select gender, firstname, lastname, weight, height, birthdate, activity, purpose from users where id = :id";
+    $stmt = $db->prepare($sql);
+    $stmt->execute(array('id' => $id));
+    $result = $stmt->fetch();
+
+    if(isset($_SESSION['idUser'])){
+      $_SESSION['gender'] = $result['gender'];
+      $_SESSION['firstname'] = $result['firstname'];
+      $_SESSION['lastname'] = $result['lastname'];
+      $_SESSION['weight'] = $result['weight'];
+      $_SESSION['height'] = $result['height'];
+      $date = new DateTime($result['birthdate']);
+      $now = new DateTime();
+      $interval = $now->diff($date);
+      $_SESSION['birthdate'] =  $interval->y;
+      switch ($result['activity']) {
+        case 'sedentary':
+          $_SESSION['activity'] = 'Sedentary';
+          break;
+        case 'moderate':
+          $_SESSION['activity'] = 'Moderately active';
+          break;
+        case 'active':
+          $_SESSION['activity'] = 'Active';
+          break;
+        case 'vactive':
+          $_SESSION['activity'] = 'Vigorously active';
+          break;
+        default:
+          $_SESSION['activity'] = 'Extremely active';
+          break;
+      }
+      switch ($result['purpose']) {
+        case 'less':
+          $_SESSION['purpose'] = 'lose weight';
+          break;
+        case 'same':
+          $_SESSION['purpose'] = 'maintain the same weight';
+          break;
+        default:
+          $_SESSION['purpose'] = 'gain weight';
+          break;
+      }
+
+      $rbm = UserStatistics::calculateBasalMetabolicRate($_SESSION['gender'], $_SESSION['weight'], $_SESSION['height'], $interval->y);
+      $_SESSION['rbm'] = $rbm;
     }
   }
 }

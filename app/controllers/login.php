@@ -7,12 +7,6 @@ class login extends Controller{
 
     public function index() {
 	    $this->view('loginoregister/login');
-	    /*if(isset($_POST['r-btn'])){
-	    	$this->view('loginoregister/register/');
-	    }
-	    if(isset($_POST['l-btn'])){
-	    	$this->view('loginoregister/login/');
-	    }*/
  	}
 
     public function login(){
@@ -32,22 +26,20 @@ class login extends Controller{
 				if($user->verifyLogin($username,$pass)==true)
 	            {
 	                session_start();
-		            $_SESSION['idUser'] = $row['id'];
-		            $_SESSION['userName'] = $row['username'];
+		            $_SESSION['idUser'] = $user->getIdUser($username,$pass);
+		            $_SESSION['userName'] = $username;
                 	$_SESSION['data'] =['logged' => true];
-                header("Location: ../public/userform");
-                die();
+                	$user->getUserData($_SESSION['idUser']);
+                	if(isset($_SESSION['idUser']) and $_SESSION['gender'] !== null){
+                		header("Location: ../public/history");
+                	}
+                	else{
+                		header("Location: ../public/userform");
+                	}
 	            }
                 else echo "<script>alert('Eroare!')</script>";
 			}
 		}
     }
-
-    public function logout(){
-    	  session_unset();
-          session_destroy();
-          $this->redirect("public/index");
-      }
-
 }
  ?>

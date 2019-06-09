@@ -14,21 +14,17 @@ class UserForm extends Controller{
         $first_name =  $_POST['firstname'];
         $weight = $_POST['weight'];
         $height= $_POST['height'];
-        $day= $_POST['day'];
-        $month=  $_POST['month'];
-        $year= $_POST['year'];
         $activ= $_POST['activity'];
         $achieve= $_POST['purpose'];
-
-        $birthday = $year . "-" . $month . "-" . $day;
+        $birthday = $_POST['bday'];;
         echo $last_name . " " . $first_name . " " .$gender . " " .$weight . " " .$height . " " .$birthday  ." " .$activ ." " .$achieve;
       //header("Location: ../public/login.php");
-        if(empty($gender) || empty($last_name) || empty($first_name) || empty($weight) || empty($height) || empty($day) || empty($month) || empty($year) || empty($activ) || empty($achieve)){
+        if(empty($gender) || empty($last_name) || empty($first_name) || empty($weight) || empty($height) || empty($birthday) || empty($activ) || empty($achieve)){
             echo "<script>alert('You must complete all the fields!')</script>";
         }
-        else{//aici nu merge!!!!!!!!!!!!!!
-            if($form->insertUserData(1,$last_name,$first_name,$gender,$weight,$height, $birthday, $activ, $achieve)==true){
-                header("Location: ../public/home");
+        else{
+            if($form->insertUserData($_SESSION['idUser'],$last_name,$first_name,$gender,$weight,$height, $birthday, $activ, $achieve)==true){
+                header("Location: ../public/history");
             }
             else{
                 echo "<script>alert('Could not insert into the database!')</script>";

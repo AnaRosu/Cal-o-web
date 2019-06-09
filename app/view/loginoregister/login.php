@@ -1,7 +1,3 @@
-<?php
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +20,6 @@
           <nav>
               <ul>
                   <li><a href="../public/">Home</a></li>
-                  <li><a href="how.html">How it works</a></li>
                   <li class="active"><a href="login.php">Login</a></li>
               </ul>
           </nav>

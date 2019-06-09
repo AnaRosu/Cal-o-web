@@ -11,7 +11,7 @@
     <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat Smart | Set up Your account </title>
-    <link rel="stylesheet" href="../public/css/userform.css">
+    <link rel="stylesheet" href="../public/css/userform.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
       </head>
 <body>
@@ -24,16 +24,16 @@
         <nav>
             <ul>
                 <li><a href="">History</a></li>
-                <li><a href="">Add Food</a></li>
-                <li><a href="">LogOut</a></li>
+                <li><a href="../public/addFood">Add Food</a></li>
+                <li><a href="../public/logout">LogOut</a></li>
                 <?php
-                  if(isset($_SESSION['idUser'])){
-                    echo '<li class="login-status"> | Logat ca ' . $_SESSION['userName'] .'</li>';
-                  }
-                  else{
-                    echo '<li class="login-status"> Nelogat</li>';
-                  }
-                ?>
+                 if(isset($_SESSION['userName'])){
+                   echo '<li id="login-status"> Logged in as ' . $_SESSION['userName'] .'.</li>';
+                 }
+                 else{
+                   echo '<li id="login-status"> Logged out</li>';
+                 }
+               ?>
             </ul>
         </nav>
     </div>
@@ -96,7 +96,7 @@
       <input type="radio" name="purpose" value="less">lose weight<br>
       <input type="radio" name="purpose" value="same">maintain the same weight<br>
       <input type="radio" name="purpose" value="more">gain weight<br>
-      <input class ="btn" type="submit" name ="save"> 
+      <input class ="btn" type="submit" name ="save">
   </form>
   </div>
 </div>
