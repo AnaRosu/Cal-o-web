@@ -33,5 +33,60 @@ class UserStatistics{
         return $rbm;
     }
 
+		function calculateProteinNeeded($weight, $activityLevel)
+		{
+			$numberOfProteins = 0;
+			switch ($activityLevel) {
+					case 'sedentary':
+						$numberOfProteins = $weight * 0.8;
+						break;
+					case 'moderate':
+						$numberOfProteins = $weight * 0.8;
+						break;
+					case 'active':
+							$numberOfProteins = $weight * 1.0;
+						break;
+					case 'vactive':
+							$numberOfProteins = $weight * 1.2;
+						break;
+					default:
+							$numberOfProteins = $weight * 1.4;
+						break;
+				}
+				return $numberOfProteins;
+		}
+
+
+	function calculateCarbsNeeded($purpose)
+		{
+			 $numberOfCarbs = 0;
+			  if($purpose == 'Maintain the same weight')
+				{
+					$numberOfCarbs = 225;
+
+				}elseif( $purpose == 'Gain weight')
+				{
+					$numberOfCarbs = 325;
+				}elseif($purpose == 'Lose weight')
+				{
+					$numberOfCarbs = 100;
+
+				}
+				return $numberOfCarbs;
+		}
+		function calculateFiberNeeded($gender)
+	 		{
+	 			 $numberOfFiber = 0;
+	 			  if($gender == 'Male')
+	 				{
+	 					$numberOfFiber = 23;
+
+	 				}elseif($gender == 'Female')
+ 	 				{
+ 	 					$numberOfFiber = 34;
+
+ 	 				}
+	 				return $numberOfFiber = 0;;
+	 		}
 }
 ?>

@@ -6,6 +6,10 @@ class History extends Controller{
     	$user=$this->model('User',Db::getInstance());
     	$this->view('history');
     	$user->getUserData($_SESSION['idUser']);
+    	if(isset($_POST['update'])){
+    		echo "intra aici";
+    		header("Location: ../public/formUpdate");
+    	}
     }
 
 }

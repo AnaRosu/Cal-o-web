@@ -24,7 +24,7 @@
         <nav>
             <ul>
                 <li><a href="../public/history">History</a></li>
-                <li><a href="../public/advices">Advices</a></li>
+                  <li><a href="../public/advices">Advices</a></li>
                 <li><a href="../public/addFood">Add Food</a></li>
                 <li><a href="../public/logout">LogOut</a></li>
                 <?php
@@ -44,16 +44,19 @@
 
   <p>General information</p>
   <div class="form-group">
-  <form class="my-form" id="form-ajax" action="" method="post">
+    <?php
+    $arr = json_decode($_SESSION['sth']);
+   ?>
+  <form id="form" class="my-form" action="" method="post">
       <input type="radio" name="gender" value="Male">Male
       <input type="radio" name="gender" value="Female">Female<br>
-      <input type="text" class="field1" name="firstname" placeholder="First Name...">
-      <input type="text" class="field2" name="lastname" placeholder="Last Name...">
+      <input type="text" class="field1" name="firstname" value=<?php   echo $arr[0]->firstname; ?> >
+      <input type="text" class="field2" name="lastname" value=<?php   echo $arr[0]->lastname; ?>>
       <label class="field1">Weight:</label>
       <label class="field2-l">Height:</label>
       <br>
-      <input type="text" class="field1" name="weight" placeholder="kg">
-      <input type="text" class="field2" name="height" placeholder="cm"><br>
+      <input type="text" class="field1" name="weight" value=<?php   echo $arr[0]->weight; ?>>
+      <input type="text" class="field2" name="height" value=<?php   echo $arr[0]->height; ?>><br>
       <label class="field1">Date of birth:</label>
       <label class="field2-2">Activity level:</label>
       <br>

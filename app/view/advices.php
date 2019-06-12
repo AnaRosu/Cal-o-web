@@ -22,8 +22,8 @@
           </div>
           <nav>
               <ul>
-                <li class="active"><a href="">History</a></li>
-                  <li><a href="../public/advices">Advices</a></li>
+                <li><a href="../public/history">History</a></li>
+                  <li class="active"><a href="">Advices</a></li>
                 <li><a href="../public/addFood">Add Food</a></li>
                 <li><a href="../public/logout">LogOut</a></li>
                 <?php
@@ -40,39 +40,29 @@
   </header>
   <div class="wrapper">
     <div class="form">
-        <h2 class="form-title">Your personal information</h2>
-        <p><?php echo 'Your Basal methabolic rate is ' . $_SESSION['rbm']?></p>
-<!--
-        <p><?php echo 'You need to consume ' . $_SESSION['calories'] . " calories daily."?></p> -->
+        <h2 class="form-title">What we recommend: </h2>
         <table id="userdata">
         <tr>
-            <td>First name</td>
-            <td><?php echo $_SESSION['firstname']?></td>
+            <td>Calories</td>
+            <td><?php echo  $_SESSION['calories']?> kcal</td>
         </tr>
         <tr>
-            <td>Weight</td>
-            <td><?php echo $_SESSION['weight']?> kg</td>
+            <td>Proteins</td>
+            <td><?php echo $_SESSION['proteins']?> g</td>
         </tr>
         <tr>
-            <td>Height</td>
-            <td><?php echo $_SESSION['height']?> cm</td>
+            <td>Carbs</td>
+            <td><?php echo  $_SESSION['carbs']?> g</td>
         </tr>
         <tr>
-            <td>Age</td>
-            <td><?php echo $_SESSION['age']?></td>
+            <td>Fats</td>
+            <td><?php echo $_SESSION['lip']?> g</td>
         </tr>
         <tr>
-            <td>Your level of avtivity</td>
-            <td><?php echo $_SESSION['activity']?></td>
-        </tr>
-        <tr>
-            <td>You want to</td>
-            <td><?php echo $_SESSION['purpose']?></td>
+            <td>Fibers</td>
+            <td><?php echo$_SESSION['fiber']?> g</td>
         </tr>
         </table>
-        <form action="" method="post">
-          <button type="submit" class="btn" name="update">Update</button>
-        </form>
     </div>
   </div>
 </body>

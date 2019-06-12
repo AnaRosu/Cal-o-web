@@ -1,0 +1,333 @@
+body{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../images/image2.jpg"), no-repeat center center fixed;
+    background-size: 100% 100%;
+    min-height: 750px;
+    background-attachment: fixed;
+}
+* {
+  box-sizing: border-box;
+}
+/* container for header , all sections  */
+.container{
+  width: 75%;
+  overflow:hidden;
+  margin: auto;
+  }
+
+ul {
+    margin:0;
+    padding: 0;
+}
+
+/* start header */
+
+header{
+  background:#007a5a;
+    color:#fff;
+    padding-top: 20px;
+    min-height: 70px;
+}
+header #branding{
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header  nav ul li {
+    float: left;
+    display: inline;
+    padding: 0 7px 0 7px ;
+}
+
+header nav  ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header nav  ul li a:hover{
+    color:#ccc;
+    font-weight: bold;
+}
+
+header .active a {
+    color:#002e22;
+    font-weight: bold;
+}
+i.fab {
+   margin: 3px ;
+   color:#002e22;
+ }
+/* end header */
+.btn {
+  font-weight: normal;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 10px;
+  width: 5.5em;
+  height: 2.5em;
+  font-size: 1em;
+  line-height: 1.0;
+  border-radius: 6px;
+  background-color: #007a5a;
+  border: 2px solid #cccccc;
+  color: #ffffff;
+  display: table;
+  margin-top: 20px;
+}
+.btn-submit {
+	width: 20%;
+	font-size: 20px;
+	border-radius: 6px;
+	/* border: 2px solid #cccccc; */
+	cursor: pointer;
+	color:#ffffff;
+}
+.btn-submit:focus {
+	outline: none;
+}
+
+input[type="text"],
+input[type="date"] {
+	display: block;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	font-size: 22px;
+  height: 30px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+input:focus {
+	outline: none;
+	border: 1px solid #44C7A9;
+}
+
+.input-std {
+	width: 20%;
+}
+thead {
+  background: #007A5A;
+  color: white;
+  text-decoration: underline;
+}
+tbody tr:nth-child(odd) {
+  background: #DEDCDC;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 40%;
+  float: left;
+}
+
+td, th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+@media only screen and (min-width: 1000px) and (max-width:1300px){
+.form-box {
+  width: 50%;
+  margin-top: 17%;
+}
+
+header{
+    min-height: 90px;
+}
+header nav{
+  margin-top: 21px;
+}
+header nav  ul li a {
+    font-size: 20px;
+}
+
+i.fab {
+font-size: 50px;
+ }
+ header span{
+   font-size: 40px;
+ }
+ .form-group select option{
+       position:absolute;
+       font-size: 10px;
+  }
+  .btn{
+    margin-top: 10px;
+  }
+}
+input[type="text"],
+input[type="number"] {
+	display: block;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	font-size: 22px;
+  height: 30px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+input:focus {
+	outline: none;
+	border: 1px solid #44C7A9;
+}
+
+.input-std {
+	width: 20%;
+}
+
+@media only screen and (min-width: 950px) and (max-width:1000px){
+.form-box {
+  width: 55%;
+  margin-left: 7%;
+  margin-top: 30%;
+  margin-bottom: 7%;
+}
+.dropdown,.form-group input[type=text],.form-group input[type=number]{
+  height: 47px;
+}
+.input-std {
+	width: 95.5%;
+}
+
+}
+
+@media only screen and (min-width: 701px) and (max-width:950px){
+.form-box{
+  width: 60%;
+  font-size: 19px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+.form-group input[type=text]{
+  height: 37px
+}
+.dropdown{
+  height: 44px;
+}
+.input-std {
+	width: 95.5%;
+}
+.btn{
+  margin-top: 20px;
+}
+}
+
+@media only screen and (min-width: 601px) and (max-width:701px){
+.form-box{
+  width: 50%;
+  font-size: 17px;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+.form-group input[type=text],.form-group input[type=number]{
+  height:  30px;
+  font-size: 17px;
+}
+.dropdown,.dropdown2{
+  height: 40px;
+  font-size: 17px;
+}
+.btn{
+  margin-top: 10px;
+}
+.input-std {
+	width: 95.5%;
+}
+}
+
+@media only screen and (min-width: 450px) and (max-width: 601px){
+body{min-height: 700px;}
+header{padding: 5px;}
+header h1{font-size: 30px;}
+header nav  ul li a  { font-size: 15px;}
+.form-box{
+  font-size: 15px;
+  width: 75%;
+  margin-left: 10%;
+}
+.dropdown{
+  height: 35px;
+}
+
+.form-group{
+  margin-bottom: 10px;
+}
+.input-std {
+	width:90%;
+}
+.dropdown{
+  font-size: 15px;
+  width: 90%;
+  height: 45px;
+}
+.btn{
+  margin:0px;
+  width: 90%;
+}
+.form-group input[type=text],.form-group input[type=number]{
+  font-size: 15px;
+}
+.my-form{
+ padding-left: 20px;
+}
+}
+
+
+@media only screen and (max-width:450px){
+body{min-height: 700px;}
+header{padding: 5px;}
+header h1{font-size: 30px;}
+header nav  ul li a  { font-size: 15px;}
+.form-box{
+  width: 90%;
+  font-size: 15px;
+  margin:5%;
+}
+.dropdown{
+  font-size: 15px;
+  float: left;
+  width: 30%;
+}
+.dropdown{
+  height: 40px;
+}
+.form-group input[type=text],.form-group input[type=number]{
+  height: 35px;
+}
+.form-group input[type=text],.form-group input[type=number],.dropdown{
+  font-size: 15px;
+  width: 90%;
+  float: left;
+}
+.btn{margin: 0px;
+height: 45px;
+font-size: 20px;
+}
+.btn-submit{
+  width: 90%;
+}
+.form-box p {
+    font-size: 25px;
+}
+}

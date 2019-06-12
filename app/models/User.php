@@ -112,7 +112,7 @@ class User {
       $date = new DateTime($result['birthdate']);
       $now = new DateTime();
       $interval = $now->diff($date);
-      $_SESSION['birthdate'] =  $interval->y;
+      $_SESSION['age'] =  $interval->y;
       switch ($result['activity']) {
         case 'sedentary':
           $_SESSION['activity'] = 'Sedentary';
@@ -132,19 +132,28 @@ class User {
       }
       switch ($result['purpose']) {
         case 'less':
-          $_SESSION['purpose'] = 'lose weight';
+          $_SESSION['purpose'] = 'Lose weight';
           break;
         case 'same':
-          $_SESSION['purpose'] = 'maintain the same weight';
+          $_SESSION['purpose'] = 'Maintain the same weight';
           break;
         default:
-          $_SESSION['purpose'] = 'gain weight';
+          $_SESSION['purpose'] = 'Gain weight';
           break;
       }
 
       $rbm = UserStatistics::calculateBasalMetabolicRate($_SESSION['gender'], $_SESSION['weight'], $_SESSION['height'], $interval->y);
       $_SESSION['rbm'] = $rbm;
+      $_SESSION['calories'] = UserStatistics::calculateCaloriesNeeded($rbm, $result['activity']);
+      $_SESSION['proteins'] = UserStatistics::calculateProteinNeeded($_SESSION['weight'], $result['activity']);
+      $_SESSION['carbs'] =    UserStatistics::calculateCarbsNeeded($_SESSION['purpose']);
+      $_SESSION['lip'] = 0.04 *   $_SESSION['calories'];
+      $_SESSION['fiber'] =  UserStatistics::calculateFiberNeeded($_SESSION['gender']);
     }
+  }
+
+  function action_update($id){
+
   }
 }
 
