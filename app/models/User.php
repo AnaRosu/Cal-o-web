@@ -152,8 +152,30 @@ class User {
     }
   }
 
-  function action_update($id){
+  function updateWeight($id, $weight){
+    $db = Db::getInstance();
+    $sql = "UPDATE users SET weight=:weight WHERE id=:id";
+    $stmt= $db->prepare($sql);
+    $stmt->execute(array('weight' => $weight, 'id' => $id));
 
+    $now = date("Y-m-d", time());
+    $sql = "insert into weight_change (id_user, weight,date_inreg) values (:id, :weight,:date_i)";
+    $stmt= $db->prepare($sql);
+    $stmt->execute(array('id' => $id, 'weight' => $weight, 'date_i' => $now));
+  }
+
+  function updateActivity($id,$activity){
+    $db = Db::getInstance();
+    $sql = "UPDATE users SET activity=:activity WHERE id=:id";
+    $stmt= $db->prepare($sql);
+    $stmt->execute(array('activity' => $activity, 'id' => $id));
+  }
+
+  function updatePurpose($id,$purpose){
+    $db = Db::getInstance();
+    $sql = "UPDATE users SET purpose=:purpose WHERE id=:id";
+    $stmt= $db->prepare($sql);
+    $stmt->execute(array('purpose' => $purpose, 'id' => $id));
   }
 }
 

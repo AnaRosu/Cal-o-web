@@ -2,14 +2,8 @@
 require_once '../app/db.php';
 /*require_once './app/models/Userform.'*/
 class UserForm extends Controller{
-
-
-
-  function __construct() {
-      $this->view('userform');
-  }
-
     public function index() {
+    $this->view('userform');
     echo 'intra aici';
       $form = $this->model('User',Db::getInstance());
       /*$this->view('userform');*/
@@ -37,9 +31,8 @@ class UserForm extends Controller{
             }
         }
       }
-      
+
+
     }
-    /*public function form(){
-    }*/
 }
  ?>

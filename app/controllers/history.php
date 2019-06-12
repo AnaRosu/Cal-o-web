@@ -5,11 +5,16 @@ class History extends Controller{
     public function index() {
     	$user=$this->model('User',Db::getInstance());
     	$this->view('history');
-    	$user->getUserData($_SESSION['idUser']);
-    	if(isset($_POST['update'])){
-    		echo "intra aici";
-    		header("Location: ../public/formUpdate");
+    	if(isset($_POST['updateWeightBtn'])){
+    		$user->updateWeight($_SESSION['idUser'],$_POST['UpdateWeight']);
     	}
+    	if(isset($_POST['updateActivityBtn'])){
+    		$user->updateActivity($_SESSION['idUser'],$_POST['activity']);
+    	}
+    	if(isset($_POST['updatePurposeBtn'])){
+    		$user->updatePurpose($_SESSION['idUser'],$_POST['purpose']);
+    	}
+    	$user->getUserData($_SESSION['idUser']);
     }
 
 }

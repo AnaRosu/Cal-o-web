@@ -71,9 +71,10 @@
       <input type="radio" name="purpose" value="less">lose weight<br>
       <input type="radio" name="purpose" value="same">maintain the same weight<br>
       <input type="radio" name="purpose" value="more">gain weight<br>
-      <button type="submit" class="btn-login" id="update" name="update">Update</button>
+      <input class ="btn" type="submit" name ="save"> 
   </form>
   </div>
+  <script src="Cal-o-web/public/javaScript/updateform.js"></script>
 </div>
 </body>
 </html>

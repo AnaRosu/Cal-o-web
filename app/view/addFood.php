@@ -23,7 +23,6 @@ session_start();
           <nav>
               <ul>
                   <li><a href="../public/history">History</a></li>
-                  <li><a href="../public/advices">Advices</a></li>
                   <li class="active"><a href="">Add Food</a></li>
                   <li><a href="../public/logout">LogOut</a></li>
                   <?php
@@ -43,11 +42,15 @@ session_start();
     <div class="form-box">
       <p style="margin-left: 30px;">What did you eat today?</p>
       <form class="my-form" action="" method="POST">
-      <div class="form-group">
+        <div class="form-group">
+        <label class="field1">Meal:</label>
+        <br>
+        <input type="text" class="dropdown" name="meal" placeholder="Ex: Breakfast">
+      </div>
+        <div class="form-group">
         	<input type="text" class="input-std"
                      name="searchTerm" type="text" placeholder="Search Term: butter"></div>
-
-        <div class="form-group">
+      <div class="form-group">
         <label>Category:</label>
         <select  name="foodGroup" class="dropdown" id="select_category">
                <option value="all">All Food Groups</option><option value="1100">Vegetables and Vegetable Products</option>
@@ -121,3 +124,5 @@ session_start();
             </div>
         </body>
 </html>
+
+        

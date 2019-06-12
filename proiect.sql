@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Gazdă: 127.0.0.1
--- Timp de generare: iun. 12, 2019 la 07:21 PM
--- Versiune server: 10.1.40-MariaDB
--- Versiune PHP: 7.3.5
+-- Timp de generare: iun. 12, 2019 la 09:39 PM
+-- Versiune server: 10.3.15-MariaDB
+-- Versiune PHP: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -46,9 +46,9 @@ CREATE TABLE `mese` (
 --
 
 INSERT INTO `mese` (`id`, `user_id`, `masa`, `data`, `calorii`, `proteine`, `grasimi`, `carbohidrati`, `fibre`, `zahar`) VALUES
-(2, 3, 'Breakfast', '2019-12-06', 76, 154, 11, 12, 1, 0),
-(3, 3, 'Lunch', '2019-06-10', 43, 276, 11, 11, 33, 2),
-(7, 3, 'Lunch', '2019-06-09', 8, 479, 4, 27, 60, 5);
+(1, 1, 'Breakfast', '2019-12-06', 76, 154, 11, 12, 1, 0),
+(2, 1, 'Lunch', '2019-06-10', 43, 276, 11, 11, 33, 2),
+(3, 1, 'Lunch', '2019-06-09', 8, 479, 4, 27, 60, 5);
 
 -- --------------------------------------------------------
 
@@ -75,7 +75,32 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `gender`, `firstname`, `lastname`, `weight`, `height`, `birthdate`, `activity`, `purpose`) VALUES
-(3, 'Alex', '4124bc0a9335c27f086f24ba207a4912', 'Male', 'Ionescu', 'Alex', 45, 172, '1999-08-28', 'moderate', 'more');
+(1, 'anamr', '276b6c4692e78d4799c12ada515bc3e4', 'Female', 'Ana-Maria', 'Rosu', 50, 170, '1998-07-29', 'moderate', 'more'),
+(2, 'florina', '47bce5c74f589f4867dbd57e9ca9f808', 'Female', 'Florina', 'Rosu', 51, 157, '1994-03-31', 'vactive', 'same');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `weight_change`
+--
+
+CREATE TABLE `weight_change` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `date_inreg` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Eliminarea datelor din tabel `weight_change`
+--
+
+INSERT INTO `weight_change` (`id`, `id_user`, `weight`, `date_inreg`) VALUES
+(1, 1, 50, '2019-06-02'),
+(3, 1, 51, '2019-05-14'),
+(4, 1, 52, '2019-06-26'),
+(9, 2, 49, '2019-06-12'),
+(10, 2, 51, '2019-06-12');
 
 --
 -- Indexuri pentru tabele eliminate
@@ -95,6 +120,13 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexuri pentru tabele `weight_change`
+--
+ALTER TABLE `weight_change`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_user` (`id_user`);
+
+--
 -- AUTO_INCREMENT pentru tabele eliminate
 --
 
@@ -108,7 +140,13 @@ ALTER TABLE `mese`
 -- AUTO_INCREMENT pentru tabele `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pentru tabele `weight_change`
+--
+ALTER TABLE `weight_change`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constrângeri pentru tabele eliminate
@@ -119,6 +157,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `mese`
   ADD CONSTRAINT `mese_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Constrângeri pentru tabele `weight_change`
+--
+ALTER TABLE `weight_change`
+  ADD CONSTRAINT `weight_change_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
