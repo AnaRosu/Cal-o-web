@@ -70,7 +70,7 @@
       <input type="radio" name="purpose" value="less">lose weight<br>
       <input type="radio" name="purpose" value="same">maintain the same weight<br>
       <input type="radio" name="purpose" value="more">gain weight<br>
-      <input class ="btn" type="submit" name ="save"> 
+      <input class ="btn" type="submit" name ="save">
   </form>
   </div>
 </div>

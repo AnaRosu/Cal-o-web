@@ -22,7 +22,7 @@ class register extends Controller{
 			$username = $_POST['uid'];
 			$pass = $_POST['pwd'];
 			$passRepeat = $_POST['pwd-repeat'];
-			echo $username ." ". $pass;
+			//echo $username ." ". $pass;
 			if(empty($username) || empty($pass) || empty($passRepeat)){
 				//header("Location: ../login.php?error=emptyfields&uid=".$username);
 				//echo "a intrat la gol";

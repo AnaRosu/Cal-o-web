@@ -9,15 +9,15 @@ class UpdateForm extends Controller{
         if ($_GET['action'] == 'fetch') {
             // tell the browser what's coming
             header('Content-type: application/json');
-     
+
             // open database connection
             $db = Db::getInstance();
-     
+
             // use prepared statements!
             $query = $db->prepare('select * from users where id = ?');
             $query->execute(array($_GET['userId']));
             $row = $query->fetch(PDO::FETCH_OBJ);
-     
+
             // send the data encoded as JSON
             echo json_encode($row);
             exit;

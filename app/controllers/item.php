@@ -1,6 +1,6 @@
 <?php
 require_once '../app/db.php';
-
+error_reporting(E_ALL & ~E_NOTICE);
 class Item extends Controller{
 
     public function index() {

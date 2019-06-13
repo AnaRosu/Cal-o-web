@@ -115,3 +115,62 @@ i.fab {
   background-color: #4CAF50;
   color: white;
 }
+.tips {
+  text-align: left;
+  margin-left: 0;
+  margin-top: 0;
+
+}
+
+.date {
+  padding: 10px 20px 20px 20px;
+  width: 375px;
+  height: 20%;
+  background-color: #DEDCDC;
+  box-shadow: 0 0 25px 0 #000;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+#dropdown2{
+  display: inline-block;
+  color: gray;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 22px;
+  height: 40px;
+  margin-left: 1%;
+  padding: 4px 6px;
+  width:100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.form-group select option{
+  position:absolute;
+}
+.btn {
+
+        font-weight: normal;
+        text-align: center;
+        cursor: pointer;
+        white-space: nowrap;
+        padding: 10px 30px;
+        width: 8em;
+        height: 3em;
+        font-size: 1em;
+        line-height: 1.0;
+        border-radius: 6px;
+        background-color: #007a5a;
+        border: 2px solid #cccccc;
+        color: #ffffff;
+        display: table;
+   margin: 0 auto
+}
+#tipsText{
+  float: right;
+  width: 45%;
+  margin-top: -580px;
+  margin-right:120px;
+  font-size:20px;
+  font-weight: bold;
+}

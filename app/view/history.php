@@ -1,6 +1,6 @@
 <?php
   session_start();
-  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +11,7 @@
     <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat Smart | LogIn </title>
-    <link rel="stylesheet" href="../public/css/history.css">
+    <link rel="stylesheet" href="../public/css/hst.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -23,28 +23,28 @@
       }
     </style>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script> 
+    <script>
     $(document).ready(function() {
         $('#updateonclick').click(function() {
             $('.show-onclick').toggle();
         });
     });
     </script>
-    <script> 
+    <script>
     $(document).ready(function() {
         $('#updateonclick2').click(function() {
             $('.today2').toggle();
         });
     });
     </script>
-    <script> 
+    <script>
     $(document).ready(function() {
         $('#updateonclick3').click(function() {
             $('.today3').toggle();
         });
     });
     </script>
-    
+
     <script type="text/javascript">
       $(document).ready(function(){
         $.ajax({
@@ -369,7 +369,7 @@
             <option value="active">Active</option>
             <option value="vactive">Vigorously active</option>
             <option value="eactive">Extremely active</option>
-          </select>            
+          </select>
           <button type="submit" class="btn-1" name="updateActivityBtn">Save</button>
           </form>
         </div>
@@ -401,8 +401,5 @@
       <canvas id="mycanvas"></canvas>
     </div>
   </div>
-  <!-- javascript -->
-   <!--  <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/Chart.min.js"></script> -->
 </body>
 </html>

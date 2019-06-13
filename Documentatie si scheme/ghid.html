@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html" charset="UTF-8">
+  <title>Raport</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html,body,header,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+</head>
+<body>
+  <article resource="#" typeof="schema:ScholarlyArticle">
+    <header>
+      <h1 property="schema:name">Cal-o-web</h1>
+      <p role="doc-subtitle" property="schema:alternateName">
+        Calculate your calories
+      </p>
+    </header>
+    <section typeof="sa:AuthorsList">
+    <h2>Authors</h2>
+        <ul>
+          <li typeof="sa:ContributorRole" property="schema:author">
+          <span typeof="schema:Person">
+        <meta property="schema:givenName" content="Andreea">
+        <meta property="schema:additionalName" content="Karina">
+        <meta property="schema:familyName" content="Ionescu">
+        <span property="schema:name">Andreea-Karina Ionescu</span>
+         </span>
+        <li typeof="sa:ContributorRole" property="schema:author">
+           <span typeof="schema:Person">
+         <meta property="schema:givenName" content="Ana">
+         <meta property="schema:additionalName" content="Maria">
+         <meta property="schema:familyName" content="Rosu">
+         <span property="schema:name">Ana-Maria Rosu</span>
+          </span>
+        </ul>
+   </section>
+
+      <section id="descriere" typeof="sa:Abstract" role="doc-abstract">
+            <h2>1. Descriere</h2>
+            <p>Cal-O-Web este o aplicatie care permite utilizatorilor inregistrati introducerea de alimente.
+              Aplicatia stocheaza valorile nutritionale ale alimentelor introduse oferind recomandari si statistici.
+            </p>
+      </section>
+
+
+      <section id="introducere" role="doc-introduction">
+          <h2>2. Introducere</h2>
+          <p>Fiecare utilizator al aplicatiei va avea un cont care ii ofera accesul la serviciile oferite de aplicatie.
+            Utilizatorul nou inregistrat completeaza un formular in urma caruia aplicatia calculeaza rata metabolismului bazal,
+            numarul necesar de calorii, proteine, grasimi, carbohidrati. De asemenea,
+            utilizator poate introduce alimentele consumate pe parcursul unei perioade de timp.
+            In functie de datele introduse aplicatia ofera statistici si recomandari in schimbarea dietei.
+          </p>
+      </section>
+
+      <section id="login">
+           <h2 >3. Scenarii de utilizare</h2>
+           <h3>3.1. Login/Creare cont</h3>
+           <ul>
+           <li>1. Utilizatorul porneste aplicatia.</li>
+           <li>2. Se logheaza cu cont si parola.</li>
+           <ul>
+           <li>2.1. Daca informatiile exista in baza de date, logarea s-a realizat cu succes si se deschide fereastra principala.</li>
+           <li>2.2. Daca username-ul este valid dar parola este gresita, user-ul va primi un mesaj de eroare, si va putea sa isi reintroduca parola pana
+     combinatia celor doua va fi gasita in baza de date, validandu-se.</li>
+           <li>2.3. Daca username-ul nu exisa in baza de date, utilizatorul va avea posibilitatea de a-si crea un cont folosind acea combinatie de username si
+     parola.</li>
+           </ul>
+           <li>3. Daca utilizatorul este nou inregistrat trebuie sa completeze un formular.</li>
+           <li>4. Daca utilizatorul nu este nou inregistrat este redirectionat la pagina cu istoricul datelor.</li>
+           </ul>
+      </section>
+
+
+      <section id="userform">
+           <h3>3.2 Completare formular "Userform"</h3>
+           <ul>
+           <li>1. Utilizatorul logat completeaza campurile formularului.</li>
+           <li>2. Apasa butonul Submit.</li>
+           <li>3. Aplicatia calculeaza rata metabolismului bazal.</li>
+           <li>4. Aplicatia afiseaza pagina de History unde este evidentiat necesarul zilnic de calorii, proteine, frasimi, carbohidrati</li>
+           </ul>
+      </section>
+
+      <section id="addFood">
+           <h3>3.3 Adaugare masa "Add Food"</h3>
+           <ul>
+           <li>1. Utilizatorul logat acceseaza pagina pentru adaugare mancare.</li>
+           <li>2. Introduce alimentul dorit.</li>
+           <li>3. Apasa butonul Search</li>
+           <li>4. Aplicatia afiseaza o lista de alimente care se potrivesc cu alimentul cautat de utilizator</li>
+           <li>5. Utilizatorul alege un aliment dorit din lista</li>
+           <li>4. Aplicatia afiseaza valorile nutritionale ale alimentului</li>
+           <li>5. Utilizatorul introduce masa la care a servit alimentul si data</li>
+           <li>6. Apasa butonul Save</li>
+           <li>7. Datele sunt introduse in baza de date</li>
+           </ul>
+      </section>
+
+      <section id="history">
+           <h3>3.4 Vizualizare date "History"</h3>
+           <ul>
+           <li>1. Utilizatorul logat acceseaza pagina de history.</li>
+           <li>2. Aplicatia afiseaza datele personale ale utilizatorului.</li>
+           <li>3. Utilizatorul poate vizualiza evolutia greutatii.</li>
+           <li>4. Utilizatorul introduce perioada de timp pentru a vedea statistici.</li>
+           </ul>
+      </section>
+
+      <section id="adv">
+           <h3>3.5 Vizualizare recomandari "Advices"</h3>
+           <ul>
+           <li>1. Utilizatorul logat acceseaza pagina de advices.</li>
+           <li>2. Aplicatia afiseaza cate calorii, proteine, grsimi, carbohidrati sunt recomandate utilizatorului .</li>
+           <li>3. Utilizatorul poate alege o perioada de timp zi/luna.</li>
+           <li>4. Apasa butonul submit.</li>
+           <li>5. Aplicatia ii va oferi sfaturi si schimbari in dieta.</li>
+           </ul>
+      </section>
+
+      <section id="export">
+           <h3>3.6 Exporta datele in format XML</h3>
+           <ul>
+           <li>1. Utilizatorul logat acceseaza pagina de history.</li>
+           <li>2. Apasa butonul genereaza XML.</li>
+           <li>3. Aplicatia genereaza doua fisiere XML: users.xml care contine toti utilizatorii si meals.xml care contine toate mesele.</li>
+           </ul>
+      </section>
+
+      <section id="logout">
+           <h3>3.7 LogOut</h3>
+           <ul>
+           <li>1. Utilizatorul logat apasa butonul de Logout.</li>
+           <li>2. Aplicatia il redirectioneaza catre pagina principala .</li>
+           </ul>
+      </section>
+  </article>
+</body>
+</html>

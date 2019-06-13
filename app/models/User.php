@@ -21,21 +21,12 @@ class User {
         $stmt->execute(array('username' => $user, 'password' => $password));
         $result = $stmt->fetch();
         if(!empty($result)){
-
-        //   if(password_verify($pass,$row['password'])){
-        //     echo 'parola login ' . $pass;
            return true;
         }
           else{
-        //     header("Location: ../loginoregister/login?error=wrongpass");
+
            return false;
           }
-        //
-        // }
-        // else{
-        //   header("Location: ../loginoregister/login?error=nouser");
-        //   return false;
-        // }
     }
 
     public function executeRegister($username,$pass)
@@ -43,11 +34,6 @@ class User {
       $db = Db::getInstance();
       $sql = "select username from users where username = :username";
       $stmt = $db->prepare($sql);
-      /*if(!mysqli_stmt_prepare($stmt,$sql)){
-        header("Location: ../loginoregister/register?error=sqlerror");
-        exit();
-      }
-      else{*/
       try{
         $stmt->execute(array(':username' => $username));
         $resCheck =  $stmt->fetchAll();
@@ -153,54 +139,54 @@ class User {
   }
 
   function updateWeight($id, $weight){
-    $db = Db::getInstance();
-    $sql = "UPDATE users SET weight=:weight WHERE id=:id";
-    $stmt= $db->prepare($sql);
-    $stmt->execute(array('weight' => $weight, 'id' => $id));
+  $db = Db::getInstance();
+  $sql = "UPDATE users SET weight=:weight WHERE id=:id";
+  $stmt= $db->prepare($sql);
+  $stmt->execute(array('weight' => $weight, 'id' => $id));
 
-    $now = date("Y-m-d", time());
-    $sql = "insert into weight_change (id_user, weight,date_inreg) values (:id, :weight,:date_i)";
-    $stmt= $db->prepare($sql);
-    $stmt->execute(array('id' => $id, 'weight' => $weight, 'date_i' => $now));
+  $now = date("Y-m-d", time());
+  $sql = "insert into weight_change (id_user, weight,date_inreg) values (:id, :weight,:date_i)";
+  $stmt= $db->prepare($sql);
+  $stmt->execute(array('id' => $id, 'weight' => $weight, 'date_i' => $now));
+}
+
+function updateActivity($id,$activity){
+  $db = Db::getInstance();
+  $sql = "UPDATE users SET activity=:activity WHERE id=:id";
+  $stmt= $db->prepare($sql);
+  $stmt->execute(array('activity' => $activity, 'id' => $id));
+}
+
+function updatePurpose($id,$purpose){
+  $db = Db::getInstance();
+  $sql = "UPDATE users SET purpose=:purpose WHERE id=:id";
+  $stmt= $db->prepare($sql);
+  $stmt->execute(array('purpose' => $purpose, 'id' => $id));
+}
+
+function getAllUsers(){
+  $db=Db::getInstance();
+  $data = array();
+
+  $stmt = $db->query("SELECT * FROM users");
+
+  while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    array_push($data, $row);
   }
+  return $data;
+}
 
-  function updateActivity($id,$activity){
-    $db = Db::getInstance();
-    $sql = "UPDATE users SET activity=:activity WHERE id=:id";
-    $stmt= $db->prepare($sql);
-    $stmt->execute(array('activity' => $activity, 'id' => $id));
+function getUserMeals($id){
+  $db=Db::getInstance();
+  $data = array();
+
+  $stmt = $db->prepare("SELECT * FROM mese where user_id = :id");
+  $stmt->execute(array('id' => $id));
+  while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+    array_push($data, $row);
   }
-
-  function updatePurpose($id,$purpose){
-    $db = Db::getInstance();
-    $sql = "UPDATE users SET purpose=:purpose WHERE id=:id";
-    $stmt= $db->prepare($sql);
-    $stmt->execute(array('purpose' => $purpose, 'id' => $id));
-  }
-
-  function getAllUsers(){
-    $db=Db::getInstance();
-    $data = array();
-
-    $stmt = $db->query("SELECT * FROM users");
-    
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-      array_push($data, $row);
-    }
-    return $data;
-  }
-
-  function getUserMeals($id){
-    $db=Db::getInstance();
-    $data = array();
-
-    $stmt = $db->prepare("SELECT * FROM mese where user_id = :id");
-    $stmt->execute(array('id' => $id));
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-      array_push($data, $row);
-    }
-    return $data;
-  }
+  return $data;
+}
 }
 
 ?>

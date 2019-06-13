@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html" charset="UTF-8">
+  <title>Raport</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html,body,header,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+</head>
+<body>
+  <article resource="#" typeof="schema:ScholarlyArticle">
+    <header>
+      <h1 property="schema:name">Cal-o-web</h1>
+      <p role="doc-subtitle" property="schema:alternateName">
+        Calculate your calories
+      </p>
+    </header>
+    <section typeof="sa:AuthorsList">
+    <h2>Authors</h2>
+        <ul>
+          <li typeof="sa:ContributorRole" property="schema:author">
+          <span typeof="schema:Person">
+        <meta property="schema:givenName" content="Andreea">
+        <meta property="schema:additionalName" content="Karina">
+        <meta property="schema:familyName" content="Ionescu">
+        <span property="schema:name">Andreea-Karina Ionescu</span>
+         </span>
+        <li typeof="sa:ContributorRole" property="schema:author">
+           <span typeof="schema:Person">
+         <meta property="schema:givenName" content="Ana">
+         <meta property="schema:additionalName" content="Maria">
+         <meta property="schema:familyName" content="Rosu">
+         <span property="schema:name">Ana-Maria Rosu</span>
+          </span>
+        </ul>
+   </section>
+
+      <section id="descriere" typeof="sa:Abstract" role="doc-abstract">
+            <h2>1. Descriere</h2>
+            <p>Cal-O-Web este o aplicatie care permite utilizatorilor inregistrati introducerea de alimente.
+              Aplicatia stocheaza valorile nutritionale ale alimentelor introduse oferind recomandari si statistici.
+            </p>
+      </section>
+
+
+      <section id="introducere" role="doc-introduction">
+          <h2>2. Introducere</h2>
+          <p>Fiecare utilizator al aplicatiei va avea un cont care ii ofera accesul la serviciile oferite de aplicatie.
+            Utilizatorul nou inregistrat completeaza un formular in urma caruia aplicatia calculeaza rata metabolismului bazal,
+            numarul necesar de calorii, proteine, grasimi, carbohidrati. De asemenea,
+            utilizator poate introduce alimentele consumate pe parcursul unei perioade de timp.
+            In functie de datele introduse aplicatia ofera statistici si recomandari in schimbarea dietei.
+          </p>
+      </section>
+
+      <section id="tehnologii">
+              <h2>3. Tehnologii folosite</h2>
+              <p>Pentru front-end:</p>
+              <ul>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+              </ul>
+              <p>Pentru back-end: </p>
+              <ul>
+                  <li>MySQL</li>
+                  <li>PHP</li>
+                  <li>USDA Food Composition Databases</li>
+
+              </ul>
+          </section>
+        <section id="bd">
+            <h2>4. Baza de date</h2>
+                <ol>
+                    <li>
+                        Tabela users (id, username, password, gender, firstname, lastname, weight, height, birthdate, activity, purpose )
+                        contine toate datele unui utilizator.
+                    </li>
+                    <li>
+                        Tabela mese( id,id_user, masa, data, calorii, proteine, grasimi, carbohidrati,fibre, zahar )
+                        contine toatevalorile nutritionale ale unui aliment consumat.
+                    </li>
+              </ol>
+            </section>
+        <section id="git">
+                <h2>5. Sistem management al codului sursa</h2>
+                <p>
+                    Sistemul de management al codului sursa este github fiecare membru al echipei fiind contribuitor.
+                </p>
+            </section>
+
+</article>
+</body>
+</html>
