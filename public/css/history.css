@@ -80,7 +80,7 @@ i.fab {
   margin-top: 0;
 }
 
-.form, .chart-container {
+.form {
   padding: 10px 20px 20px 20px;
   width: 375px;
   height: 20%;
@@ -88,6 +88,40 @@ i.fab {
   box-shadow: 0 0 25px 0 #000;
   margin-left: 10%;
   margin-top: 5%;
+  display: inline-block;
+}
+.chart-container{
+  margin-bottom: 5%;
+  padding: 10px 20px 20px 20px;
+  width: 375px;
+  height: 20%;
+  background-color: #DEDCDC;
+  box-shadow: 0 0 25px 0 #000;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+.today{
+  float: right;
+  padding: 10px 20px 20px 20px;
+  width: 45%;
+  height: 475px;
+  background-color: #DEDCDC;
+  box-shadow: 0 0 25px 0 #000;
+  margin-right: 10%;
+  margin-top: 5%;
+  display: inline-block;
+}
+
+.today2, .today3{
+  float: right;
+  padding: 10px 20px 20px 20px;
+  width: 45%;
+  height: 350px;
+  background-color: #DEDCDC;
+  box-shadow: 0 0 25px 0 #000;
+  margin-right: 10%;
+  margin-top: 5%;
+  display: none;
 }
 
 #userdata {
@@ -116,7 +150,7 @@ i.fab {
   color: white;
 }
 
-.show-onclick{
+.show-onclick, .show-onclik2, .show-onclick3{
   display: none;
 }
 
@@ -158,8 +192,6 @@ i.fab {
 }
 
 .form-group input[type=text]{
-
-  display: inline-block;
   color: gray;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -173,7 +205,6 @@ i.fab {
 }
 
 .dropdown2{
-  display: inline-block;
   color: gray;
   background-color: #ffffff;
   border: 1px solid #cccccc;

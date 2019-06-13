@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <style>
       .chart-container {
         width: 375px;
@@ -29,6 +30,21 @@
         });
     });
     </script>
+    <script> 
+    $(document).ready(function() {
+        $('#updateonclick2').click(function() {
+            $('.today2').toggle();
+        });
+    });
+    </script>
+    <script> 
+    $(document).ready(function() {
+        $('#updateonclick3').click(function() {
+            $('.today3').toggle();
+        });
+    });
+    </script>
+    
     <script type="text/javascript">
       $(document).ready(function(){
         $.ajax({
@@ -73,6 +89,207 @@
         });
       });
       </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+        $.ajax({
+          url : "http://localhost/another-tw/Cal-o-web/public/caloriestoday.php",
+          type : "GET",
+          success : function(data){
+            console.log(data);
+
+            var data_columns = [];
+            var data_inreg = [];
+
+            for(var i in data) {
+              data_inreg.push(data[i].inreg);
+              data_columns.push(data[i].column);
+            }
+            var barChartData = {
+              labels:data_columns,
+              datasets: [
+                {
+                  label: "Eaten",
+                  backgroundColor: "lightgreen",
+                  borderColor: "green",
+                  borderWidth: 1,
+                  data: data_inreg
+                },
+                {
+                  label: "Recommended",
+                  backgroundColor: "lightblue",
+                  borderColor: "blue",
+                  borderWidth: 1,
+                  data: ["<?php echo $_SESSION['calories']?>","<?php echo $_SESSION['proteins']?>","<?php echo $_SESSION['lip']?>","<?php echo $_SESSION['carbs']?>","<?php echo $_SESSION['fiber']?>","0"]
+                }
+              ]
+            };
+
+            var chartOptions = {
+              responsive: true,
+              legend: {
+                position: "top"
+              },
+              title: {
+                display: true,
+                text: "You ate today"
+              },
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }]
+              }
+            }
+
+            var ctx = $("#barchart");
+
+            var LineGraph = new Chart(ctx, {
+              type: 'bar',
+              data: barChartData,
+              options: chartOptions
+            });
+          },
+          error : function(data) {
+
+          }
+        });
+      });
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+        $.ajax({
+          url : "http://localhost/another-tw/Cal-o-web/public/calorieslastweek.php",
+          type : "GET",
+          success : function(data){
+            console.log(data);
+
+            var data_columns = [];
+            var data_inreg = [];
+
+            for(var i in data) {
+              data_inreg.push(data[i].inreg);
+              data_columns.push(data[i].column);
+            }
+            var barChartData = {
+              labels:data_columns,
+              datasets: [
+                {
+                  label: "Eaten",
+                  backgroundColor: "lightgreen",
+                  borderColor: "green",
+                  borderWidth: 1,
+                  data: data_inreg
+                },
+                {
+                  label: "Recommended",
+                  backgroundColor: "lightblue",
+                  borderColor: "blue",
+                  borderWidth: 1,
+                  data: ["<?php echo $_SESSION['calories']?>","<?php echo $_SESSION['proteins']?>","<?php echo $_SESSION['lip']?>","<?php echo $_SESSION['carbs']?>","<?php echo $_SESSION['fiber']?>","0"]
+                }
+              ]
+            };
+
+            var chartOptions = {
+              responsive: true,
+              legend: {
+                position: "top"
+              },
+              title: {
+                display: true,
+                text: "Last week"
+              },
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }]
+              }
+            }
+
+            var ctx = $("#barchart2");
+
+            var LineGraph = new Chart(ctx, {
+              type: 'bar',
+              data: barChartData,
+              options: chartOptions
+            });
+          },
+          error : function(data) {
+
+          }
+        });
+      });
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+        $.ajax({
+          url : "http://localhost/another-tw/Cal-o-web/public/calorieslastmonth.php",
+          type : "GET",
+          success : function(data){
+            console.log(data);
+
+            var data_columns = [];
+            var data_inreg = [];
+
+            for(var i in data) {
+              data_inreg.push(data[i].inreg);
+              data_columns.push(data[i].column);
+            }
+            var barChartData = {
+              labels:data_columns,
+              datasets: [
+                {
+                  label: "Eaten",
+                  backgroundColor: "lightgreen",
+                  borderColor: "green",
+                  borderWidth: 1,
+                  data: data_inreg
+                },
+                {
+                  label: "Recommended",
+                  backgroundColor: "lightblue",
+                  borderColor: "blue",
+                  borderWidth: 1,
+                  data: ["<?php echo $_SESSION['calories']?>","<?php echo $_SESSION['proteins']?>","<?php echo $_SESSION['lip']?>","<?php echo $_SESSION['carbs']?>","<?php echo $_SESSION['fiber']?>","0"]
+                }
+              ]
+            };
+
+            var chartOptions = {
+              responsive: true,
+              legend: {
+                position: "top"
+              },
+              title: {
+                display: true,
+                text: "Last month"
+              },
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }]
+              }
+            }
+
+            var ctx = $("#barchart3");
+
+            var LineGraph = new Chart(ctx, {
+              type: 'bar',
+              data: barChartData,
+              options: chartOptions
+            });
+          },
+          error : function(data) {
+
+          }
+        });
+      });
+      </script>
     </head>
     <body>
     <!-- start header-->
@@ -102,6 +319,7 @@
   <div class="wrapper">
     <div class="form">
         <h2 class="form-title">Your personal information</h2>
+
         <p><?php echo 'Your Basal methabolic rate is ' . $_SESSION['rbm']?></p>
 
         <p><?php echo 'You need to consume ' . $_SESSION['calories'] . " calories daily."?></p>
@@ -131,6 +349,9 @@
             <td><?php echo $_SESSION['purpose']?></td>
         </tr>
         </table>
+        <form action="" method="post">
+          <button type="submit" class="btn" name="generatexml">Generate XML</button>
+        </form>
         <button id="updateonclick" type="submit" class="btn" name="update">Update</button>
         <div class="show-onclick form-group">
           <form action="" method="post">
@@ -164,6 +385,17 @@
             <button type="submit" class="btn-1" name="updatePurposeBtn" >Save</button>
           </form>
         </div>
+    </div>
+    <div class="today">
+      <canvas id="barchart"></canvas>
+      <button type="submit" id="updateonclick2" class="btn" name="weekBtn" >Last week</button>
+      <button type="submit" id="updateonclick3" class="btn" name="monthBtn" >Last month</button>
+    </div>
+    <div class="today2">
+      <canvas class="show-onclick2 form-group" id="barchart2"></canvas>
+    </div>
+    <div class="today3">
+      <canvas class="show-onclick3 form-group" id="barchart3"></canvas>
     </div>
     <div class="chart-container">
       <canvas id="mycanvas"></canvas>

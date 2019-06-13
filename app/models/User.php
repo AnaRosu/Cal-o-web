@@ -177,6 +177,30 @@ class User {
     $stmt= $db->prepare($sql);
     $stmt->execute(array('purpose' => $purpose, 'id' => $id));
   }
+
+  function getAllUsers(){
+    $db=Db::getInstance();
+    $data = array();
+
+    $stmt = $db->query("SELECT * FROM users");
+    
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+      array_push($data, $row);
+    }
+    return $data;
+  }
+
+  function getUserMeals($id){
+    $db=Db::getInstance();
+    $data = array();
+
+    $stmt = $db->prepare("SELECT * FROM mese where user_id = :id");
+    $stmt->execute(array('id' => $id));
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+      array_push($data, $row);
+    }
+    return $data;
+  }
 }
 
 ?>
